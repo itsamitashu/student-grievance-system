@@ -25,7 +25,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "https://student-grievance-system-3e3e.onrender.com",
+        "https://student-grievance-system-3e3e.onrender.com/api/login",
         formData
       );
 

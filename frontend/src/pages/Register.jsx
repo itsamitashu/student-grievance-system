@@ -26,7 +26,7 @@ function Register() {
 
     try {
       await axios.post(
-        "https://student-grievance-system-3e3e.onrender.com",
+        "https://student-grievance-system-3e3e.onrender.com/api/register",
         formData
       );
 
