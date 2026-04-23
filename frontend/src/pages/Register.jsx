@@ -26,7 +26,7 @@ function Register() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/register",
+        "https://student-grievance-system-3e3e.onrender.com",
         formData
       );
 

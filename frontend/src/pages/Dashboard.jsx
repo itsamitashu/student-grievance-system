@@ -15,7 +15,7 @@ function Dashboard() {
 
   const [searchTitle, setSearchTitle] = useState("");
 
-  const backendURL = "http://localhost:5000";
+  const backendURL = "https://student-grievance-system-3e3e.onrender.com";
 
   const handleChange = (e) => {
     setFormData({
