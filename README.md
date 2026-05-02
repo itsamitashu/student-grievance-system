@@ -1,79 +1,119 @@
-# 📚 Library Management System (MERN Stack)
+# 📌 Student Grievance Management System
 
-A full-stack Library Management System built using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project allows users to register, login, and manage books efficiently.
-
----
-
-## 🚀 Live Demo
-
-### 🌐 Frontend (User Interface)
-
-https://library-frontend-gs98.onrender.com
-
-### ⚙️ Backend (API Server)
-
-https://library-backend-qxzb.onrender.com
+A full-stack MERN application that allows students to register, log in, and manage grievances efficiently. The system supports grievance submission, tracking, updating, searching, and deletion with a clean UI and secure authentication.
 
 ---
 
-## 💻 GitHub Repository
+## 🚀 Live Project Links
 
-https://github.com/itsamitashu/library-management-system
+🔗 **Frontend (Live):**
+https://student-grievance-frontend-zala.onrender.com
 
----
+🔗 **Backend (API):**
+https://student-grievance-system-3e3e.onrender.com
 
-## ✨ Features
-
-* 🔐 User Authentication (Register & Login using JWT)
-* 📚 Add New Books
-* 📖 View All Books
-* 🗑️ Delete Books
-* 📊 Dashboard with Book Statistics
-* 🌐 Fully Responsive UI (Mobile + Desktop)
-* ☁️ Deployed on Render
+🔗 **GitHub Repository:**
+https://github.com/yourusername/student-grievance-system
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend:
+### Frontend
 
-* React.js
-* React Router DOM
+* React.js (Vite)
 * Axios
+* React Router DOM
 * CSS (Custom Styling)
 
-### Backend:
+### Backend
 
 * Node.js
 * Express.js
 * MongoDB Atlas
-* Mongoose
+* Mongoose (ODM)
 * JWT Authentication
-* dotenv
+* bcrypt (Password Hashing)
+
+### Deployment
+
+* Render (Frontend + Backend)
+* GitHub (Version Control)
 
 ---
 
-## ⚙️ Installation (Run Locally)
+## ✨ Features
 
-### 1️⃣ Clone the Repository
+### 🔐 Authentication
 
-```bash
-git clone https://github.com/itsamitashu/library-management-system.git
-cd library-management-system
+* Student Registration
+* Login with JWT
+* Secure password hashing using bcrypt
+
+### 📋 Grievance Management
+
+* Add Grievance
+* View All Grievances
+* Update Status (Pending → Resolved)
+* Delete Grievance
+* Search by Title
+
+### 🎨 UI Features
+
+* Clean and responsive design
+* Dashboard view
+* User-friendly forms
+
+---
+
+## 📂 Project Structure
+
+```
+student-grievance-system/
+│
+├── backend/
+│   ├── models/
+│   │   ├── Student.js
+│   │   └── Grievance.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── grievanceRoutes.js
+│   ├── .env
+│   ├── index.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── Dashboard.jsx
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+```
+
+---
+
+## ⚙️ Installation & Setup (Local)
+
+### 1️⃣ Clone Repository
+
+```
+git clone https://github.com/yourusername/student-grievance-system.git
+cd student-grievance-system
 ```
 
 ---
 
 ### 2️⃣ Backend Setup
 
-```bash
+```
 cd backend
 npm install
-npm run server
 ```
 
-Create `.env` file inside backend:
+Create `.env` file:
 
 ```
 PORT=5000
@@ -81,11 +121,17 @@ MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
+Run backend:
+
+```
+npm run dev
+```
+
 ---
 
 ### 3️⃣ Frontend Setup
 
-```bash
+```
 cd frontend
 npm install
 npm run dev
@@ -95,16 +141,19 @@ npm run dev
 
 ## 📡 API Endpoints
 
-### Auth Routes
+### 🔐 Authentication
 
-* POST `/api/users/register`
-* POST `/api/users/login`
+* POST `/api/register`
+* POST `/api/login`
 
-### Book Routes
+### 📋 Grievances
 
-* POST `/api/books/add`
-* GET `/api/books`
-* DELETE `/api/books/:id`
+* POST `/api/grievances`
+* GET `/api/grievances`
+* GET `/api/grievances/:id`
+* PUT `/api/grievances/:id`
+* DELETE `/api/grievances/:id`
+* GET `/api/grievances/search?title=xyz`
 
 ---
 
@@ -113,32 +162,27 @@ npm run dev
 * Login Page
 * Register Page
 * Dashboard
-* Book Management
+* Grievance Module
+* Search & Update/Delete
+
+---
+
+## 📌 Future Enhancements
+
+* Admin Panel
+* Email Notifications
+* Role-Based Access
+* Analytics Dashboard
 
 ---
 
 ## 👨‍💻 Author
 
 **Amit Kumar**
-B.Tech Student
-
----
-
-## 📌 Project Description (For Viva)
-
-This is a MERN Stack based Library Management System that allows users to register, login, and manage books using CRUD operations. The backend is built with Node.js and Express, connected to MongoDB Atlas using Mongoose, and the frontend is built using React. The project is deployed on Render for both frontend and backend.
-
----
-
-## ⭐ Future Improvements
-
-* Edit Book Feature
-* Search & Filter Books
-* Role-based Authentication (Admin/User)
-* Issue/Return Book System
+CSE AIML
 
 ---
 
 ## 📄 License
 
-This project is for educational purposes only.
+This project is for educational purposes.
